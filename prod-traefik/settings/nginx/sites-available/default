@@ -6,7 +6,7 @@ server {
 
     index index.html;
 
-    server_name test.localhost;
+    server_name test.runelab.eu;
 
     location ~ /.well-known/acme-challenge {
         allow all;
