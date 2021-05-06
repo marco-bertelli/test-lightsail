@@ -1,0 +1,42 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    root /var/www/html;
+
+    index index.html;
+
+    server_name test.localhost;
+
+    location ~ /.well-known/acme-challenge {
+        allow all;
+        root /var/www/html;
+    }
+
+    #ottimizzazione del buffer
+    client_body_buffer_size 10K;
+    client_header_buffer_size 1k;
+    client_max_body_size 8m;
+    large_client_header_buffers 2 1k;
+    #gestione della richiesta del client
+    client_body_timeout 12;
+    client_header_timeout 12;
+    keepalive_timeout 15;
+    send_timeout 10;
+    #velocità nella risposta zippando la stessa
+    gzip             on;
+    gzip_comp_level  2;
+    gzip_min_length  1000;
+    gzip_proxied     expired no-cache no-store private auth;
+    gzip_types       text/plain application/x-javascript text/xml text/css application/xml;
+
+    location / {
+     
+      try_files $uri $uri/ /index.html;
+    }
+    
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+      root   /usr/share/nginx/html;
+    }
+}
