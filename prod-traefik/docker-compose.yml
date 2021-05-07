@@ -15,8 +15,6 @@ services:
     restart: unless-stopped
     networks:
       - web
-    ports:
-      - 8080:80
     labels:
       - traefik.docker.network=web
       - traefik.http.routers.${PROJECT_NAME}.rule=Host(`${DOMAIN}`)
