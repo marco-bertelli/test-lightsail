@@ -287,7 +287,7 @@
 
         // popovers
 
-        $('.popovers').popover();
+        //$('.popovers').popover();
 
 
     });
