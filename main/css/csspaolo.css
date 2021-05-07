@@ -1,0 +1,50 @@
+.buttonstyle {margin-top: 5px;}
+.buttoninteressi {margin-top: 5px;     margin-left: 5px;}
+.mg_top  {margin-top: 5px;}
+/*.inuse #cliente_nome {background-color:red!important;}*/
+
+.panel-heading a {color:white; }
+
+
+/*Please wait
+-------------------------------------------------------*/
+/* Start by setting display:none to make this hidden.
+    Then we position it in relation to the viewport window
+    with position:fixed. Width, height, top and left speak
+    speak for themselves. Background we set to 80% white with
+    our animation centered, and no-repeating */
+.plizwait {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .5 ) 
+                 url('../images/pIkfp.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+    the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+    modal element will be visible */
+body.loading .plizwait {
+    display: block;
+}
+.clearfix:hover{cursor:pointer!important;}
+/*------------------------------------------------------*/
+
+/*calendar
+#stand1 .d1,#stand1 .d2,#stand1 .d3 {background-color:red;}
+#stand1 .d4,#stand1 .d5{background-color:green;}
+#stand1 .d6,#stand1 .d7{background-color:red;}
+#stand2 .d11,#stand2 .d12,#stand2 .d13 {background-color:red;}
+#stand2 .d14,#stand2 .d15{background-color:green;}
+#stand2 .d16,#stand2 .d17,#stand2 .d18 {background-color:red;}*/

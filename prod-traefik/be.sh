@@ -7,4 +7,4 @@ then
     CMD="bash"
 fi
 
-docker-compose exec web_container /bin/bash -ic "${CMD}"
+docker-compose exec php /bin/bash -ic "${CMD}"
