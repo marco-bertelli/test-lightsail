@@ -36,7 +36,7 @@ EOT;
 			ini_set( 'display_errors', 1 );
 			error_reporting( E_ALL );
 			$from = "emailtest@YOURDOMAIN";
-			$to = "marcobert37@gmail.com";
+			$to = "pcremascoliweb@gmail.com";
 			$subject = "mail da script quotidiano";
 			$message = $errorLogger."<br>".$messaggio; 
 			$headers = "From:" . $from;

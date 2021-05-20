@@ -1,2 +1,2 @@
-* * * * * su -c 'php /var/www/scripts/periodic_event_alerts.php schedule:run >> /var/log/schedule.log 2>&1'
+0 * * * * su -c 'php /var/www/scripts/periodic_event_alerts.php schedule:run >> /var/log/schedule.log 2>&1'
 
