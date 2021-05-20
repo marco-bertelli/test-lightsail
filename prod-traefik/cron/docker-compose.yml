@@ -1,0 +1,16 @@
+version: "3"
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false
+
+services:
+
+  cron:
+    build: .
+    volumes:
+        - ./scripts:/var/www/scripts
+    networks:
+        - web

@@ -63,13 +63,13 @@ session_start();
 		localStorage.setItem('BASEPATH', '".BASEPATH."' );
 		</script>";
 		require_once("controller/Mobile_Detect.php");
-		//$detect = new Mobile_Detect;
-		// if ( $detect->isMobile() ) {
-		// 	echo "<script>localStorage.readonly= 'readonly'; console.log('readonly', localStorage.readonly);</script>";
-		// }
-		// else {
-		// 	echo "<script>localStorage.readonly= ''; console.log('readonly', localStorage.readonly);</script>";
-		// }
+		$detect = new Mobile_Detect;
+		if ( $detect->isMobile() ) {
+			echo "<script>localStorage.readonly= 'readonly'; console.log('readonly', localStorage.readonly);</script>";
+		}
+		else {
+			echo "<script>localStorage.readonly= ''; console.log('readonly', localStorage.readonly);</script>";
+		}
 		//require_once("views/".$page.".php");      
 		//require_once("views/footer.php");	
 			

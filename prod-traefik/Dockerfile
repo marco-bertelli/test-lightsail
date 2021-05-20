@@ -25,3 +25,6 @@ RUN sed -i '/#!\/bin\/sh/aecho "$(hostname -i)\t$(hostname) $(hostname).localhos
 # And clean up the image
 
 RUN rm -rf /var/lib/apt/lists/*
+
+ 
+
