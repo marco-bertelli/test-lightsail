@@ -16,7 +16,7 @@
 	// $mail->AddAddress($address4);
 	// $mail->AddAddress($address5);
 	if ($inRange){
-		$addressRange= "paolone43@hotmail.com";      //indirizzo a cui deve andare la mail finale
+		$addressRange= "marcobert37@gmail.com";      //indirizzo a cui deve andare la mail finale
 		$addressRange1= "f.indalizio@davittorio.com";      //indirizzo a cui deve andare la mail finale
 		// $addressRange2= "produzione@davittorio.com";      //indirizzo a cui deve andare la mail finale
 		// $mail->AddAddress($addressRange);
