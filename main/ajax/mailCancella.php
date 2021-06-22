@@ -53,8 +53,8 @@ EOT;
 			$mail->Host = "smtp.gmail.com";
             $mail->Port = 465; // or 587 or 465 or 25
             $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
-			$mail->Username   = "pwebanalysis@gmail.com"; // SMTP account username
-			$mail->Password   = "sbadabam43";        // SMTP account password
+			$mail->Username   = "system.vittorio@gmail.com"; // SMTP account username
+			$mail->Password   = "0402marco";        // SMTP account password
 
 			$mail->SetFrom("Amministrazione", "Amministrazione");
 			$mail->AddReplyTo("noreply", "noreply");
