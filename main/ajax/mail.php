@@ -46,7 +46,7 @@ EOT;
 			//$mail->Subject    = $oggetto;
 			$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test			
 			$mail->MsgHTML($body);
-			$address = "f.gritti@davittorio.com";      //indirizzo a cui deve andare la mail
+			$address = "marcobert37@gmail.com";      //indirizzo a cui deve andare la mail
 			$mail->AddAddress($address);
 			if(!$mail->Send()) {
 			  //qua ci va una variabile per gestire l'errore in pagina e non degli echo che finiscono in cima fuori template
