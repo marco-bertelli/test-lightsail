@@ -62,6 +62,8 @@
 <script>
     jQuery(document).ready(function() { 
         console.log ("ready di  modal_scegli_cliente");
+        // se si spacca è questa cioccolatata
+        $.fn.dataTable.ext.errMode = 'none';
          //SCRIPT PER TABELLA CON CERCA INTERNO DA ABILITARE SE SERVE
          $('#dynamic-table5').dataTable( {
         //"aoColumns": [ null, { "bSortable": false },  null, null, null , null ],
