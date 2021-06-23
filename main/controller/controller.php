@@ -11,7 +11,7 @@
     //echo $_SERVER["DOCUMENT_ROOT"];
     //DB/ 
     require_once ("dbconnect.php");
-session_start();       
+	session_start();       
       // var_dump(BASEPATH);
 	//var_dump ($_SESSION);
 	setlocale(LC_ALL, 'it_IT.UTF8');
