@@ -1,7 +1,7 @@
 <?
 	session_start();
 	require_once("../dbconnect.php");
-    date_default_timezone_set() 
+    //date_default_timezone_set() 
 	$qs=mysql_query("SELECT * FROM todo WHERE id_evento='".$_POST['id']."'");
 	$todoList=array();
         while ($row = mysql_fetch_array($qs))
