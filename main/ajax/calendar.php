@@ -145,8 +145,8 @@ require_once("../model/clienti.php");
 			if (isset($arraytosave['location']) && ($arraytosave['location']!=$oldItem["location"] || $arraytosave['inviato']!=$oldItem["inviato"]) && $arraytosave['inviato']=='true')
 			{
 				if ($arraytosave["location"]=="Cantalupa") $arraytosave["color"]="#f400a1";
-				if ($arraytosave["location"]=="Cariplo") $arraytosave["color"]="#1FB5AD";
-				if ($arraytosave["location"]=="Giardino") $arraytosave["color"]="#A9D86E";
+				if ($arraytosave["location"]=="Atalanta") $arraytosave["color"]="#1FB5AD";
+				if ($arraytosave["location"]=="Juventus") $arraytosave["color"]="#A9D86E";
 				if ($arraytosave["location"]=="Manifestazioni") $arraytosave["color"]="#ef761d";
 				if ($arraytosave["location"]=="Gallia") $arraytosave["color"]="#232ccb";
 				if ($arraytosave["location"]=="Evento Esterno") $arraytosave["color"]="#B80000";
