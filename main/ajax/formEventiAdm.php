@@ -216,7 +216,8 @@
                                    
                                      <select type="text" id ='e_text_col' name="textColor" class="form-control">
                                                 <option value="white" <? if ($_POST['colore'] == "white") echo "selected='selected'" ?> >Bianco</option>  
-                                                <option value="red"   <? if ($_POST['colore'] == "red") echo "selected='selected'" ?> >Rosso</option>                                   
+                                                <option value="red"   <? if ($_POST['colore'] == "red") echo "selected='selected'" ?> >Rosso</option>
+                                                <option value="red"   <? if ($_POST['colore'] == "black") echo "selected='selected'" ?> >Nero</option>                                   
                                                                 
                                     </select> 
                                 </div> 
