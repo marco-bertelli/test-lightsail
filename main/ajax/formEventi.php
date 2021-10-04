@@ -84,8 +84,8 @@
                                      <select type="text" id ='location' name="location" class="form-control">
                                                 <option value="<?=$_POST['location']?>" selected="selected"><?=$_POST['location']?></option>
                                                 <option value="Cantalupa">Cantalupa</option>
-                                                <option value="Cariplo">Cariplo</option>
-                                                <option value="Giardino">Giardino</option>
+                                                <option value="Atalanta">Atalanta</option>
+                                                <option value="Juventus">Juventus</option>
                                                 <option value="Manifestazioni">Manifestazioni</option>
                                                 <option value="Gallia">Gallia</option>
                                                  <option value="Evento Esterno">Evento Esterno</option>
