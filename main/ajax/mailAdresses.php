@@ -5,13 +5,11 @@
 	// $address = "pcremascoliweb@gmail.com";      //indirizzo a cui deve andare la mail 
 	 
 	$address = "p.pasini@davittorio.com";      //indirizzo a cui deve andare la mail finale 
-	$address2 = "f.gritti@davittorio.com"; 
 	$address3 = "v.teodori@davittorio.com";      //indirizzo a cui deve andare la mail finale 
 	$address7 = "eventi@davittorio.com";
 	
 	 
 	$mail->AddAddress($address); 
-	$mail->AddAddress($address2); 
 	$mail->AddAddress($address3); 
 	$mail->AddAddress($address7); 
 
