@@ -54,7 +54,7 @@ EOT;
             $mail->Port = 465; // or 587 or 465 or 25
             $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
 			$mail->Username   = "system.vittorio@gmail.com"; // SMTP account username
-			$mail->Password   = "0402marco";        // SMTP account password
+			$mail->Password   = "laziojiboizqukau";        // SMTP account password
 
 			$mail->SetFrom("Amministrazione", "Amministrazione");
 			$mail->AddReplyTo("noreply", "noreply");
