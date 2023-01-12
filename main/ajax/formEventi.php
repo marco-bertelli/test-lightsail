@@ -1,12 +1,12 @@
 <?
 	session_start();
 	require_once("../dbconnect.php");
-    //date_default_timezone_set() 
+    //date_default_timezone_set()
 	$qs=mysql_query("SELECT * FROM todo WHERE id_evento='".$_POST['id']."'");
 	$todoList=array();
         while ($row = mysql_fetch_array($qs))
             array_push($todoList,$row);
-		
+
 		$datetimeI = new DateTime($_POST["inizio"]);
 		$_POST["inizio"] =  $datetimeI->format('d-m-Y H:i');
 		$datetimeI = new DateTime($_POST["fine"]);
@@ -14,10 +14,10 @@
 ?>
  <link rel="stylesheet" href="css/bootstrap-switch.css" />
 <form id="edit-event"  role="form" action="javascript:;" method="POST" enctype="multipart/form-data" data-id='<?=$_POST["id"]?>' >
-                    
-                    
-                             
-                            
+
+
+
+
                                <!--tab nav start-->
             <section class="panel">
                 <header class="panel-heading tab-bg-dark-navy-blue">
@@ -50,20 +50,20 @@
                 </header>
                 <div class="panel-body">
                     <div class="tab-content">
-                    
+
                         <div id="evento-2" class="tab-pane active ">
                             <div class="col-lg-12">
-                                
-                                   
-                                  
-                                
+
+
+
+
                                 <div class="form-group">
                                    <label class="flabel" for='e_title'>Titolo: </label>
                                     <input class="form-control" type="text" id ='e_title' name="title" value="<?=$_POST['title']?>" <?if ($_POST["id_pr"]!=$_SESSION["id_utente"]) echo "disabled"?>/>
                                 </div>
                                 <div class="form-group col-md-6" style='padding-left:0'>
                                     <label class="flabel" for='tipo'>Tipo Evento:</label>
-                                   
+
                                      <select type="text" id ='tipo' name="tipo" class="form-control">
                                                 <option value="<?=$_POST['tipo']?>" selected="selected"><?=$_POST['tipo']?></option>
                                                 <option value="Coffee break">Coffee break</option>
@@ -71,16 +71,16 @@
                                                 <option value="Servito">Servito</option>
                                                 <option value="Servito + Buffet">Servito + Buffet</option>
                                                 <option value="Aperitivo">Aperitivo</option>
-                                                <option value="Aperitivo rinforzato">Aperitivo rinforzato</option>                                                
-                                    </select> 
-                                </div>                              
+                                                <option value="Aperitivo rinforzato">Aperitivo rinforzato</option>
+                                    </select>
+                                </div>
                                  <!--div class="form-group">
                                    <label class="flabel" for='e_title'>Location: </label>
                                    <input class="form-control" type="text" id ='location' name="location" value="<?=$_POST['location']?>"/>
                                 </div-->
                                 <div class="form-group col-md-6" style='padding-right:0'>
                                     <label class="flabel" for='e_title'>Location:</label>
-                                   
+
                                      <select type="text" id ='location' name="location" class="form-control">
                                                 <option value="<?=$_POST['location']?>" selected="selected"><?=$_POST['location']?></option>
                                                 <option value="Cantalupa">Cantalupa</option>
@@ -90,9 +90,9 @@
                                                 <option value="Gallia">Gallia</option>
                                                  <option value="Evento Esterno">Evento Esterno</option>
                                                  <option value="RistoGolf">RistoGolf</option>
-                                                
-                                                                                         
-                                    </select> 
+
+
+                                    </select>
                                 </div>
 								<div class="form-group col-md-8" style='padding-left:0'>
                                     <label class="flabel" for='citta'>Citta/Indirizzo: </label>
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="form-group col-md-2" style='padding-right:0'>
                                    <label class="flabel" for='e_title'>N Partecipanti: </label>
-                                   <input class="form-control" type="text" id ='partecipanti' name="partecipanti" value="<?=$_POST['partecipanti']?>"/>
+                                   <input class="form-control" type="number" id ='partecipanti' name="partecipanti" value="<?=$_POST['partecipanti']?>"/>
                                 </div>
                                  <div class="form-group">
                                    <label class="flabel" for='e_title'>Note: </label>
@@ -112,13 +112,13 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                          <input id="piked_cliente"       name="id_cliente"    type="hidden" value="<?=$_POST["id_cliente"]?>">
                         <div id="cliente-2" class="tab-pane ">
-                                
-                        
+
+
                                 <div style="padding-bottom:50px;" class="form-group">
-                                    
+
                                     <a id="cliente" data-pr="<?=$_POST["id_pr"]?>" href="javascript:;" class="btn btn-info pick_list pull-left"  ><i class="fa fa-refresh">&nbsp</i>Assegna Cliente</a>
 
                                 </div>
@@ -129,7 +129,7 @@
                                  <div class="form-group col-md-6">
                                    <label class="flabel" >Cognome: </label>
                                     <input class="form-control" type="text" id ='cognome' name="cognome" value="" disabled />
-                                </div>                               
+                                </div>
                                  <div class="form-group col-md-4">
                                    <label class="flabel" >Codice Fiscale: </label>
                                     <input class="form-control" type="text" id ='cod_fiscale' name="cod_fiscale" value="" disabled />
@@ -166,10 +166,10 @@
                                    <label class="flabel" >Telefono: </label>
                                     <input class="form-control" type="text" id ='telefono1' name="telefono1" value="" disabled />
                                 </div>
-                        
-                        
+
+
                         </div>
-                         
+
                         <div id="gestione-2" class="tab-pane ">
                                 <div class="form-group row">
 								<div  class="form-group col-sm-5">
@@ -177,39 +177,39 @@
 										<input id="pr_name" type="text"  class="form-control" name="pr_name"   value="<?=$_POST['pr_name']?>"  />
 								</div>
 								</div>
-						
-								
+
+
                                  <div class="form-group row">
                                         <label class="control-label col-md-2">Data Inizio:</label>
                                         <div class="col-md-6">
                                            <input id="dp1" name="start" size="16" type="text" value="<?=$_POST["inizio"]?>"  class="form_datetime form-control" <?if ($_POST["id_pr"]!=$_SESSION["id_utente"]) echo "disabled"?>>
                                         </div>
                                     </div>
-                                    <div class="form-group row">             
+                                    <div class="form-group row">
                                        <label class="control-label col-md-2">Data Fine:</label>
                                        <div class="col-md-6">
                                            <input id="dp2" name="end" size="16" type="text" value="<?=$_POST['fine']?>"  class="form_datetime form-control" <?if ($_POST["id_pr"]!=$_SESSION["id_utente"]) echo "disabled"?>>
                                        </div>
                                   </div>
-								  
+
 								  <? if ($_SESSION["role"] != 'readonly') {?> <div class="form-group col-md-6" style="padding-left:0">
 									<label class="flabel">Caparra: </label>
 									<input class="form-control" type="text" id="caparra" name="caparra" value="<?=$_POST["caparra"]?>"  <?if ($_POST["id_pr"]!=$_SESSION["id_utente"]) echo "disabled"?>>
 								  </div>
 								  <?}?>
-								
+
                                  <div class="form-group col-md-6" style="padding-right:0">
                                     <label class="flabel" for='tipo'>Direttore:</label>
-										   
+
 											 <select type="text" id ='direttore' name="direttore" class="form-control" readonly <?if ($_POST["id_pr"]!=$_SESSION["id_utente"]) echo "disabled"?>>
 														<option value="<?=$_POST['direttore']?>" selected="selected"  ><?=$_POST['direttore']?></option>
 														<option value="Fabio">Fabio</option>
 														<option value="Francesco">Francesco</option>
 														<option value="Giuseppe">Giuseppe</option>
 														<option value="Marcello">Marcello</option>
-											</select> 
+											</select>
                                 </div> <br><br>
-								<div class="m-bot20 <? if ($_SESSION["role"] == 'readonly') echo "pull-right"?> ">  
+								<div class="m-bot20 <? if ($_SESSION["role"] == 'readonly') echo "pull-right"?> ">
 									Conferma pr  <?=$_POST['id_cliente']?>
                                     <input id="btnInviato" type="checkbox"  data-on="success" data-off="warning" <? if($_POST['opzionato'] !='true' || !$_POST['id_cliente']) echo "disabled" ?>>
                                     <input id="inviato" name="inviato" type="hidden" value="<?=$_POST['inviato']?>">
@@ -218,19 +218,19 @@
 						<div id="todo-2" class="tab-pane ">
 						    <ul class="to-do-list" id="todoList">
 								<?foreach ($todoList as $todo){require("../views/blocks/todo.php");}?>
-							</ul>					
+							</ul>
                              <div class="form-group row">
                                 <div   class="col-md-6">
-                                  
+
                                     <input id ='titoloTodo' class="form-control" type="text"  name="titoloTodo" value=""  <?if ($_POST["id_pr"]!=$_SESSION["id_utente"]) echo "disabled"?>/>
                                 </div>
-                                    
-                                <div style=" margin:0px 0px 0px 0px;" class="form-group col-md-6">           
+
+                                <div style=" margin:0px 0px 0px 0px;" class="form-group col-md-6">
                                   <a id ='create-todo' href="javascript:;" class="btn btn-info  pull-left"  ><i class="fa fa-refresh">&nbsp</i>Aggiungi</a>
                                 </div>
-                                
+
                             </div>
-                             
+
                         </div>
                     </div>
                 </div>
@@ -239,15 +239,15 @@
                      <p><button class="btn btn-info " id='salvaButton' type="submit">Salva</button></p>
        </form>
 					<? if ( $_POST['id_pr'] == $_SESSION["id_utente"]) {?><a class="btn btn-danger" id ='del-evento' href='javascript:;'>Cancella questo evento</a><?}?>
-					
-					
+
+
 
                     <script src="js/bootstrap-switch.js"></script>
                     <!--DATETIME PICKER-->
 <script src='js_sw/moment.min.js'></script>
 <script type="text/javascript" src="js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
 <script src='js_sw/datetime.js'></script>
-	
+
 <script>
 
     $(document).ready(function() {
@@ -257,8 +257,8 @@
 		if (conferma == 'true') {
 			$('#btnInviato').bootstrapSwitch('setState', true);
 			 //$('#e_back_col option[value=#0084b4]').attr('selected','selected');
-			
-		} else if (conferma =='false') {                
+
+		} else if (conferma =='false') {
 		  $('#btnInviato').bootstrapSwitch('setState', false);
 			//$('#e_back_col option[value=#a1a1a1]').attr('selected','selected');
 		}
@@ -269,44 +269,44 @@
 				$('#inviato').val("");
 				$('#inviato').val(value);
 				if (value == true ) {
-					 $('#e_back_col option[value=#0084b4]').attr('selected','selected'); 
+					 $('#e_back_col option[value=#0084b4]').attr('selected','selected');
 				} else if (value == false) {
 					   $('#e_back_col option[value=#a1a1a1]').attr('selected','selected');
 				}
 			console.log(value);
 		});
-		
+
           //se nell input hidden dell evento c'e l'id cliente compilo i campi   piked_cliente
 				// var data1= new Date("<?=$_POST['inizio']?>")
 				// var data2= new Date("<?=$_POST['fine']?>")
-				// checkin1.datetimepicker("update", data1);			
-				// checkout1.datetimepicker("update", data2);			
+				// checkin1.datetimepicker("update", data1);
+				// checkout1.datetimepicker("update", data2);
 				if (localStorage.role == "readonly") $("#salvaButton").hide();
             //$("#dp1").datetimepicker('setDate', '20/04/2016');
-            //$("#dp2").datetimepicker('setDate', '20/04/2016'); 
+            //$("#dp2").datetimepicker('setDate', '20/04/2016');
             if  ( $("#piked_cliente").val() != "0" && $("#piked_cliente").val() != "undefined"  ) {
                var cli_ext = $("#piked_cliente").val();
                 $.ajax( {
                     url: 'ajax/clienti.php',
                     type: 'POST',
                     data: {modulo:'clienti',  metodo:'pick_cliente', target:cli_ext},
-                    success: function(response){ 
-                          //alert("cliente id esistente");                  
+                    success: function(response){
+                          //alert("cliente id esistente");
                           var data = $.parseJSON(response);
                           console.log("CLIENTE" , response);
                            $("#cliente-2 input").each(function( replace ) {
                                   var pointer = $(this).attr("name");
-                                  console.log("pointer", pointer  ); 
+                                  console.log("pointer", pointer  );
                                    $(this).val(data[pointer]);
                                 });
                     }
                 });
             }
-        
+
          //pulsante per selezionare il cliente da mettere nei campi
          $(".pick_list").on ('click', function (){
-			
-         
+
+
              $("#modal_scegli_cliente").remove();
              $PickId= $(this).attr("data-pr");
              //alert($PickId);
@@ -319,7 +319,7 @@
                  //alert("fatto giro ajax");
                  }
              });
-            
+
         });
         $("#edit-event").submit(function (e){
             e.preventDefault();
@@ -335,7 +335,7 @@
             var cback=$("input[name='colore']").val();
             var id_storico=$("#edit-event").attr("data-id_storico");*/
             //var stringappend=    "<div class='fc-event' data-note='"+note+"'>"+title+"</div>"
-            
+
             $("#modalEventi").modal('hide');
             $.ajax({
                 type:'POST',
@@ -347,7 +347,7 @@
                     //event.id=$("#messages").attr("data-last");
                     $('#calendar').fullCalendar( 'removeEvents' );
                     $('#calendar').fullCalendar( 'refetchEvents' );
-                    
+
                 }
             });
         });
@@ -366,18 +366,18 @@
                     console.log("evento cancellato >");
                      $('#calendar').fullCalendar( 'removeEvents' );
                     $('#calendar').fullCalendar( 'refetchEvents' );
-                    
+
                 }
             });
         });
-        
-		// TODO 
+
+		// TODO
 		$("#create-todo").on ('click', function (){
-			
+
 			//alert($("#titoloTodo").val());
 			var titolo=$("#titoloTodo").val();
 			var id_evento=$("#edit-event").attr("data-id");
-			
+
              //alert($PickId);
              $.ajax({
                  type:'POST',
@@ -389,13 +389,13 @@
                  //alert("fatto giro ajax");
                  }
              });
-            
+
         });
         $("#edit-event").on("click", "#remove-todo", function (e){
             //e.preventDefault();
             var id=$(this).parent().attr("id");
             console.log($(this));
-         
+
         $.ajax({
                 type:'POST',
                 url:'ajax/calendar.php',
@@ -405,7 +405,7 @@
                     //event.id=$("#messages").attr("data-last");
                  $("#todoList").append(response);
                  $("#"+id).fadeOut();
-                    
+
                 }
             });
         });
@@ -427,7 +427,7 @@
 					else todoEl.removeClass("line-through");
 				}
 			});
-        });		
-        
+        });
+
     });
     </script>
