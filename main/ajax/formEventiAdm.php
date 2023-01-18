@@ -102,7 +102,7 @@
                                 </div>
                                 <div class="form-group col-md-2" style='padding-right:0'>
                                    <label class="flabel" for='e_title'>N Partecipanti: </label>
-                                   <input class="form-control" type="text" id ='partecipanti' name="partecipanti" value="<?=$_POST['partecipanti']?>"/>
+                                   <input class="form-control" type="number" id ='partecipanti' name="partecipanti" value="<?=$_POST['partecipanti']?>"/>
                                 </div>
 
 
