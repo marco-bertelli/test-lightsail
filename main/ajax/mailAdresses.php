@@ -4,7 +4,7 @@
 	$address6 = "mczulli@gmail.com";      //indirizzo a cui deve andare la mail 
 	// $address = "pcremascoliweb@gmail.com";      //indirizzo a cui deve andare la mail 
 	 
-	$address = "p.pasini@davittorio.com";      //indirizzo a cui deve andare la mail finale 
+	$address = "paolo.cremascoli@runelab.it";      //indirizzo a cui deve andare la mail finale 
 	$address3 = "v.teodori@davittorio.com";      //indirizzo a cui deve andare la mail finale 
 	$address7 = "eventi@davittorio.com";
 	
