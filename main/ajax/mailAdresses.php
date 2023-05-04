@@ -7,12 +7,13 @@
 	$address = "paolo.cremascoli@runelab.it";      //indirizzo a cui deve andare la mail finale 
 	$address3 = "v.teodori@davittorio.com";      //indirizzo a cui deve andare la mail finale 
 	$address7 = "eventi@davittorio.com";
+	$address8 = "s.marocchi@davittorio.com";
 	
 	 
 	$mail->AddAddress($address); 
 	$mail->AddAddress($address3); 
-	$mail->AddAddress($address7); 
-
+	$mail->AddAddress($address7);
+	$mail->AddAddress($address8);
 
 	// $mail->AddAddress($address4); 
 	// $mail->AddAddress($address5); 
